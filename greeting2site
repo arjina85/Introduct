@@ -1,0 +1,8 @@
+<?php
+  $username = $_SERVER['SERVER_NAME'];
+  $username = str_replace("www.", "", $username);
+  $username = str_replace("http://", "", $username);
+  $username = str_replace("https://", "", $username);
+  header("Location: welcome-$username");
+  exit;
+?>
